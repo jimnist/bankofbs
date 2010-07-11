@@ -1,0 +1,18 @@
+##
+# configuration for bobs (bankofbs) jekyll
+#
+auto:        false
+lsi:         false
+server_port: 4004
+pygments:    false
+markdown:    maruku
+permalink:   date
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_dir:    images/latex
+  png_url:    /images/latex
+exclude:
+  - config.rb
+  - rakefile
+  - dev_servers.sh
