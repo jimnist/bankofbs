@@ -10,7 +10,7 @@ require 'rake'
 
 desc "run jekyll and compass"
 task :dev do
-  system('./_scripts/dev_servers.sh')
+  system('./scripts/dev_servers.sh')
 end
 
 # TODO: make deploy work

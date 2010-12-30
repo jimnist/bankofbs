@@ -2,11 +2,7 @@
 
 # run development server for jekyll and compass
 
-if [ $# -ne 1 ]; then
-    PATHDIR=`pwd`
-else
-    PATHDIR=$1
-fi
+PATHDIR=`pwd`
 
 /usr/bin/osascript <<EOF
 activate application "Terminal"
@@ -17,7 +13,7 @@ tell application "Terminal"
     repeat with win in windows
         try
             if get frontmost of win is true then
-                do script "cd $PATHDIR" in (selected tab of win)
+                do script "cd $PATHDIR/jekyll" in (selected tab of win)
                 do script "clear" in (selected tab of win)
                 do script "jekyll --auto --server" in (selected tab of win)
             end if
@@ -31,7 +27,7 @@ tell application "Terminal"
     repeat with win in windows
         try
             if get frontmost of win is true then
-                do script "cd $PATHDIR" in (selected tab of win)
+                do script "cd $PATHDIR/compass" in (selected tab of win)
                 do script "compass watch" in (selected tab of win)
             end if
         end try
