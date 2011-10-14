@@ -6,44 +6,53 @@
 #
 # relies on public key being set up for the user on the host
 
-require 'rake'
-
-desc "run jekyll and compass"
-task :dev do
-  system('./scripts/dev_servers.sh')
-end
-
-# TODO: make deploy work
-USER_NAME = "git8"
-HOST_NAME = "jimnist.com"
-SITE_NAME = "coonien.com"
+USER_NAME = "deployer"
+REGGIE_HOST = "reggie.loco8.org"  # staging
+EINCHE_HOST = "einche.loco8.org"  # production
+SITE_DIR = "/var/sites/bankofbs"
 
 desc "build and run the site locally"
 task :run => :build do
   puts "running server locally"
-  system('jekyll --server')
+  system('jekyll --server ./jekyll ./site')
 end
 
-desc "build _site locally"
+desc "build site locally"
 task :build => :delete do
-  puts "building _site"
-  system('compass')
-  system('jekyll')
+  puts "building site"
+  system('compass compile ./compass')
+  system('jekyll ./jekyll ./site')
 end
 
-desc "deploy #{SITE_NAME}"
-task :deploy => :rsync do
-  puts "dev site deployed"
-end
-
-desc "deletes _site"
+desc "deletes site"
 task :delete do
-  puts "deleting _site"
-  system('rm -r _site')
-  puts "deleting _site complete"
+  puts "deleting site"
+  system('rm -r site')
+  puts "deleting site complete"
 end
 
-desc "rsync _site"
-task :rsync => :build do
-  system("rsync -avrz _site/ #{USER_NAME}@#{HOST_NAME}:#{SITE_NAME}")
+###
+# this (will) has tasks to publish, run the dev server, etc
+desc "run jekyll and compass dev servers"
+task :dev do
+  system "./scripts/dev_servers.sh"
+end
+
+namespace :deploy do
+
+  desc "deploy sassywood to #{REGGIE_HOST}"
+  task :reggie => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{REGGIE_HOST}:#{SITE_DIR}"
+    puts cmd
+    system cmd
+    puts "staging site deployed"
+  end
+
+  desc "deploy sassywood to #{EINCHE_HOST}"
+  task :einche => :build do
+    cmd = "rsync -avrz site/ #{USER_NAME}@#{EINCHE_HOST}:#{SITE_DIR}"
+    puts cmd
+    system cmd
+    puts "production site deployed"
+  end
 end

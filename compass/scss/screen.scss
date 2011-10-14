@@ -1,19 +1,17 @@
 // This import applies a global reset to any page that imports this stylesheet.
-// To configure blueprint, edit the partials/_base.scss file.
-@import "partials/_base.scss";
-@import "blueprint/screen.sass";
-@import "blueprint/grid.sass";
-@import "blueprint/debug.sass";
+@import "blueprint/reset";
+@import "blueprint/buttons";
 
-//@import blueprint/modules/scaffolding.sass
-@import "blueprint/modules/form.sass";
-@import "yui/modules/fonts.sass";
-@import "compass/reset.sass";
-@import "compass/utilities.sass";
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
 
-//+blueprint-typography("body.blueprint")
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
 
-// TODO: color names
+// Combine the partials into a single screen stylesheet.
+/*@import "partials/page";*/
+
+
 
 body#default {
   background-color: #ffffcc;
