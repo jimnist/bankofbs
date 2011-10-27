@@ -16,8 +16,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
@@ -33,18 +35,24 @@
 
 <body>
 
-  <div id="container">
-    <header>
-      <%= partial "header" %>
-    </header>  
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
-    <footer>
-      <%= partial "footer" %>
-    </footer>  
-  </div> <!--! end of #container -->
+  <header>
+    <%= partial "header" %>
+  </header>
 
+  <div id="main" role="main">
+    <%= yield %>
+  </div>
+  
+  <footer>
+    <%= partial "footer" %>
+  </footer>
+
+  <div id="media-320"  class="media-debugging">&gt;320&lt;</div>
+  <div id="media-480"  class="media-debugging">&gt;480&lt;</div>
+  <div id="media-600"  class="media-debugging">&gt;600&lt;</div>    
+  <div id="media-768"  class="media-debugging">&gt;768&lt;</div>
+  <div id="media-992"  class="media-debugging">&gt;992&lt;</div>
+  <div id="media-1382" class="media-debugging">&gt;1382&lt;</div>
 
   <!-- JavaScript at the bottom for fast page loading -->
 
@@ -58,6 +66,13 @@
   <script defer src="js/script.js"></script>
   <!-- end scripts -->
 
+  <script>
+    // Respond.js
+    yepnope({
+      test : Modernizr.mq('(min-width)'),
+      nope : ['js/libs/respond.min.js']
+    });
+  </script>
 
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <script>
