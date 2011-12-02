@@ -16,6 +16,7 @@ old TODOs
 
 links to add 
 -----
+* http://www.sfgate.com/cgi-bin/article.cgi?f=/n/a/2011/11/04/national/a121058D42.DTL
 * http://tongodeon.livejournal.com/890323.html
 * http://online.wsj.com/article/SB10001424052748704655004575113872190094934.html
 * http://ihateboa.com/
