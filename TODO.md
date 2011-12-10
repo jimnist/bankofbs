@@ -1,7 +1,7 @@
 middleman conversion
 -----
-* remove/convert jekyll/
-* remove/convert compass/
+* convert and remove jekyll/
+* convert and remove compass/
 
 
 old TODOs
@@ -14,7 +14,7 @@ old TODOs
 - quitters form
 
 
-links to add 
+links to add
 -----
 * http://www.sfgate.com/cgi-bin/article.cgi?f=/n/a/2011/11/04/national/a121058D42.DTL
 * http://tongodeon.livejournal.com/890323.html
