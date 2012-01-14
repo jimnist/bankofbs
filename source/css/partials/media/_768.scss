@@ -7,3 +7,56 @@
 $blueprint-grid-columns: 12;
 $blueprint-container-size: 767px;
 @include set_media_options('768');
+
+// turn some stuff off
+.tiny-logo { display: none; }
+
+// .foreclosed, .hope, .logo, .quote, .sucks { display: inline;}
+
+header {
+
+	.foreclosed {
+	  @include column(1);
+	  padding-top: 126px;
+	  img { margin-left: -11px; } }
+
+	.hope {
+		@if $blueprint_debugging { background-color: $orangina; }
+	  @include column(3);
+	  // padding: 86px 8px 0 8px;
+	  padding-top: 96px;
+	  text-align: center;
+	  color: #666;
+	  font-size: 1.25em;
+	  img {
+	    margin-left: -11px; } }
+
+	.logo {
+		@if $blueprint_debugging { background-color: $lemon; }
+		@include column(4);
+		img {
+			margin-left: -18px;
+			// margin-top: 10;
+	  //   z-index: 99;
+	  //   overflow: visible;
+	    position: absolute; } }
+
+	.quote {
+		@if $blueprint_debugging { background-color: $orangina; }
+	  @include column(3);
+	  text-align: center;
+	  color: #666;
+	  font-size: 1.25em;
+	  span {
+		  font-size: 1.25em;
+		  text-align: left;
+	    margin-top: 29px;
+	    font-style: italic;
+	    display: block; } }
+
+	.sucks {
+	  @include column(1, true);
+	  img {
+	    margin-top: 62px;
+	    margin-left: -44px; } } }
+

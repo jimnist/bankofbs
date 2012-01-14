@@ -3,6 +3,17 @@ middleman conversion
 * convert and remove jekyll/
 * convert and remove compass/
 
+misc todos
+-----
+* set up server on new EC2 box or heroku
+* add widgets for voting for the shittiest big bank
+* bank stock tracker
+* get t-shirts and stickers printed
+* connect to shopify
+* humans.txt
+* google analytics
+* free money
+
 
 old TODOs
 ------

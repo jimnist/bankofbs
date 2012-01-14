@@ -18,64 +18,48 @@ $blueprint-grid-margin: 10px;
 $blueprint-grid-columns: 5;
 $blueprint-container-size: 316px;
 
-header {
-	margin-top: 6px;
-	@if $blueprint_debugging { background: $limon; }
+body {
+	background-color: #ddd;
+	padding-top: 4px;
 }
 
 header {
-  // @include column(24, true);
-  height: 154px;
-  background-color: #ccffff;
-  border-bottom: 1px solid #333333;
-  margin-bottom: 44px;
+	// hide stuff that shows up in the bigger pages
+	.foreclosed, .hope, .quote, .sucks { display: none; }
 
-  img {
+	background-color: #f0ffff;  // azure
+	border: solid 1px #bbb;
+	border-bottom: solid 2px #333;
+  margin-bottom: 44px;
+	margin-top: 3px;
+  height: 154px;
+
+	img {
     z-index: 99;
     overflow: visible;
     position: absolute; }
 
-	.foreclosed {
-	  @include column(2);
-	  padding-top: 121px;
-	  img { margin-left: -11px; } }
+  .logo img {
+	margin-left: 18px;
+	margin-top: 10; }
 
-	.message {
-	  @include column(6);
-	  padding-top: 6px;
-	  img {
-	    margin-left: -11px; } }
-
-	.logo { @include column(8); }
-
-	//  img
-	//    :margin-left 83px
-
-	.quote {
-	  @include column(5);
-	  text-align: center;
-	  padding-top: 18px;
-	  span {
-	    margin-top: 30px;
-	    font-style: italic;
-	    display: block; } }
-
-	.sucks {
-	  @include column(2, true);
-	  img {
-	    margin-top: 44px;
-	    margin-left: 9px; } } }
-
+}
 
 div[role="main"] {
 	min-height: 300px;
-	@if $blueprint_debugging {
-		background: $lemon;
-		@include showgrid; }
+	background-color: #f2f2d9;
+
+	border-left: solid 1px #bbb;
+	border-right: solid 1px #bbb;
 }
 
 footer {
-	@if $blueprint_debugging { background: $orangina; }
+	border: solid 1px #bbb;
+	border-top: solid 1px #000;
+	background-color: hsl(30, 100%, 88%); // $orangina;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 // takes care of our default size, 320
