@@ -20,10 +20,10 @@ task :build  do
   system('middleman build')
 end
 
-desc "deploy idxchange to #{EINCHE_HOST}"
+desc "deploy bankofbs to #{EINCHE_HOST}"
 task :deploy => :build do
-  cmd = "rsync -avrz build/ #{EINCHE_HOST}:#{SITE_DIR}"
-  puts cmd
-  system cmd
-  puts "site deployed"
+	cmd = "rsync -avrz build/ #{USER_NAME}@#{EINCHE_HOST}:#{SITE_DIR}"
+	puts cmd
+	system cmd
+	puts "production site deployed"
 end

@@ -21,7 +21,7 @@ header {
 	  img { margin-left: -11px; } }
 
 	.hope {
-		@if $blueprint_debugging { background-color: $orangina; }
+		// @if $blueprint_debugging { background-color: $orangina; }
 	  @include column(3);
 	  // padding: 86px 8px 0 8px;
 	  padding-top: 96px;
@@ -32,7 +32,7 @@ header {
 	    margin-left: -11px; } }
 
 	.logo {
-		@if $blueprint_debugging { background-color: $lemon; }
+		// @if $blueprint_debugging { background-color: $lemon; }
 		@include column(4);
 		img {
 			margin-left: -18px;
@@ -42,7 +42,7 @@ header {
 	    position: absolute; } }
 
 	.quote {
-		@if $blueprint_debugging { background-color: $orangina; }
+		// @if $blueprint_debugging { background-color: $orangina; }
 	  @include column(3);
 	  text-align: center;
 	  color: #666;
@@ -60,3 +60,12 @@ header {
 	    margin-top: 62px;
 	    margin-left: -44px; } } }
 
+div[role="main"] {
+	min-height: 444px;
+
+	.soon {
+		padding: 0 66px;
+		text-align: center;
+		font-size: 4em;
+	}
+}
