@@ -5,7 +5,7 @@ middleman conversion
 
 misc todos
 -----
-* set up server on new EC2 box or heroku
+* remove sopastrike.com code
 * add widgets for voting for the shittiest big bank
 * bank stock tracker
 * get t-shirts and stickers printed
