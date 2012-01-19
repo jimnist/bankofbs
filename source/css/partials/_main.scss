@@ -27,12 +27,13 @@ header {
 	// hide stuff that shows up in the bigger pages
 	.foreclosed, .hope, .quote, .sucks { display: none; }
 
-	background-color: #f0ffff;  // azure
-	border: solid 1px #bbb;
-	border-bottom: solid 2px #666;
-  margin-bottom: 44px;
+	background-color: #CCFF99;
+	color: #202020;
+	border: solid 1px #303030;
+	border-bottom: solid 3px #000;
+  	margin-bottom: 44px;
 	margin-top: 3px;
-  height: 151px;
+  	height: 151px;
 
 	img {
     z-index: 99;
@@ -47,14 +48,15 @@ header {
 
 div[role="main"] {
 	min-height: 333px;
-	background-color: #ffc;
+	// background-color: #ffc;
+	background-color: #FFF566;
 
-	border-left: solid 1px #bbb;
-	border-right: solid 1px #bbb;
+	border: solid 1px #303030;
+	border-top: none;
 
 	.soon {
 		text-align: center;
-		color: #999;
+		color: #303030;
 		font-size: 3em;
 	}
 }
@@ -62,10 +64,9 @@ div[role="main"] {
 footer {
 	// border: solid 1px #bbb;
 	// border: solid 1px #bbb;
-	border-top: solid 1px #bbb;
 
 	// background-color: hsl(30, 100%, 88%); // $orangina;
-	color: #555;
+	color: #333;
 	text-align: center;
 	padding-top: 4px;
 	padding-bottom: 4px;
