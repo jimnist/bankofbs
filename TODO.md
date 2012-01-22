@@ -5,7 +5,6 @@ middleman conversion
 
 misc todos
 -----
-* remove sopastrike.com code
 * add widgets for voting for the shittiest big bank
 * bank stock tracker
 * get t-shirts and stickers printed

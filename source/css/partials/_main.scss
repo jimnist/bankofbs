@@ -4,6 +4,7 @@
 @import "blueprint/debug";
 
 @import "partials/base";
+
 @import "partials/media/debugging";
 
 // blueprint default(s), that in fact, don't change
@@ -20,6 +21,7 @@ $blueprint-container-size: 316px;
 
 body {
 	background-color: #ddd;
+	background-image: url('/img/stripes.png');
 	padding-top: 4px;
 }
 
@@ -27,7 +29,8 @@ header {
 	// hide stuff that shows up in the bigger pages
 	.foreclosed, .hope, .quote, .sucks { display: none; }
 
-	background-color: #CCFF99;
+	background-color: #cf9;
+	background-image: url('/img/greenies.png');
 	color: #202020;
 	border: solid 1px #303030;
 	border-bottom: solid 3px #000;
@@ -41,23 +44,91 @@ header {
     position: absolute; }
 
   .logo img {
-	margin-left: 18px;
-	margin-top: 10; }
+		margin-left: 11px;
+		margin-top: 10; }
 
 }
+
+.quote {
+  // color: #666;
+  font-size: 1.25em;
+  span.fight {
+	  font-size: 1.25em;
+	  text-align: left;
+		font-weight: bolder;
+    font-style: italic; } }
 
 div[role="main"] {
 	min-height: 333px;
 	// background-color: #ffc;
-	background-color: #FFF566;
+	background-color: #fffecf;  //#FFF566;
 
 	border: solid 1px #303030;
 	border-top: none;
+	padding-top: 17px;
 
 	.soon {
 		text-align: center;
-		color: #303030;
+		color: #000;
 		font-size: 3em;
+	}
+
+	.top_level { margin-bottom: 11px; }
+
+	.little-contento {
+		div {
+			margin: 0 10px 12px 10px;
+		}
+		.quote {
+			margin-top: 7px;
+			span.fight {
+				margin-right: 11px; }
+			span.pe {
+
+				}}
+		.rant {
+			background-color: $orangina;
+			border: solid 1px #aaa;
+
+			padding: 11px;
+			height: 222px;
+		}
+
+	}
+
+	.contento {
+		// @include column(12, true);
+		background-color: $limon;
+		height: 222px;
+		display: none;
+
+		.left {
+			@include column(3);
+			background-color: red;
+		}
+
+		.middle {
+			@include column(6);
+			background-color: red;
+		}
+
+		.right {
+			@include column(3);
+			background-color: red;
+		}
+
+	}
+
+	.homeo {
+		background-color: $limon;
+		display: none;
+		height: 222px;
+	}
+
+	.sucko {
+		background-color: $limon;
+		display: none;
+		height: 222px;
 	}
 }
 
