@@ -10,3 +10,5 @@ http://www.blankapparel.com/Anvil_980.htm
 silver for fatkat
 
 yellow for money?
+
+http://www.stripegenerator.com/

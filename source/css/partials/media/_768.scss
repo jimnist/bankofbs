@@ -17,49 +17,41 @@ header {
 
 	.foreclosed {
 	  @include column(1);
-	  padding-top: 126px;
+	  padding-top: 114px;
 	  img { margin-left: -11px; } }
 
 	.hope {
-		// @if $blueprint_debugging { background-color: $orangina; }
 	  @include column(4);
-	  // padding: 86px 8px 0 8px;
-	  padding-top: 56px;
+		.wrapper {
+	  	margin: 64px 22px 0 0;
+		}
 	  text-align: center;
-	  // color: #666;
-	  font-size: 1.25em;
-	  img {
-	    margin-left: -11px; } }
+	  font-size: 1.45em;
+	  font-weight: bolder;
+	}
 
 	.logo {
-		// @if $blueprint_debugging { background-color: $orangina; }
 		@include column(2);
 		img {
 			margin-left: -88px;
-			// margin-top: 10;
-	  //   z-index: 99;
-	  //   overflow: visible;
 	    position: absolute; } }
 
 	.quote {
-		// @if $blueprint_debugging { background-color: $orangina; }
 	  @include column(4);
 		text-align: right;
 		.wrapper {
-			@if $blueprint_debugging { background-color: $orangina; }
-			margin: 0 30px 0 0;
+			// @if $blueprint_debugging { background-color: $orangina; }
+			margin: 33px 30px 0 6px;
 		  span.fight {
-				margin-top: 29px;
-				margin-left: 26px;
+			  font-size: 1.35em;
 				text-align: left;
 				display: block; }
-			span.pe {  text-align: left; }
-		} }
+			span.pe {  text-align: left; } } }
 
 	.sucks {
 	  @include column(1, true);
 	  img {
-	    margin-top: 76px;
+	    margin-top: 57px;
 	    margin-left: -44px; } } }
 
 div[role="main"] {
@@ -76,8 +68,12 @@ div[role="main"] {
 		display: block;
 
 		// set column widths here
-		.left { @include column(3); }
+		.left {
+			@include column(3);
+			margin-top: 18px; }
 		.middle { @include column(6); }
-		.right { @include column(3, true); }
+		.right {
+			@include column(3, true);
+			margin-top: 36px; }
 	}
 }
