@@ -89,9 +89,18 @@ div[role="main"] {
 		.rant {
 			background-color: $orangina;
 			border: solid 1px #aaa;
+			font-size: 1.2em;
 
-			padding: 11px;
-			height: 222px;
+			padding: 4px 8px 11px 8px;
+			// height: 222px;
+			span {
+				display: block;
+				color: #333;
+				font-weight: bolder;
+				font-size: 1.5em; }
+		}
+		.info {
+			padding: 0 6px;
 		}
 
 	}
