@@ -37,6 +37,7 @@
 #
 # With alternative layout
 page "/index.html", :layout => "empty"
+page "/free.html", :layout => "free"
 #
 # A path which all have the same layout
 # with_layout :admin do
