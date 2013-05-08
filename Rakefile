@@ -3,10 +3,9 @@
 #
 # relies on public key being set up for the user on the host
 
-USER_NAME = "deployer"
-# REGGIE_HOST = "reggie.loco8.org"  # staging
-EINCHE_HOST = "einche.loco8.org"  # production
-SITE_DIR = "/var/sites/bankofbs"
+USER_NAME = "ubuntu"
+EINCHE_HOST = "kimchee"  # production
+SITE_DIR = "/usr/share/nginx/www"
 
 desc "run dev server"
 task :dev  do
